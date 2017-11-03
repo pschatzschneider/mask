@@ -1,4 +1,4 @@
-mod.wizards.newContentElement.wizardItems.mask {
+mod.wizards.newContentElement.wizardItems.###tab### {
 	header = LLL:EXT:mask/Resources/Private/Language/locallang_mask.xlf:new_content_element_tab
 	elements.mask_###KEY### {
 		###ICON###

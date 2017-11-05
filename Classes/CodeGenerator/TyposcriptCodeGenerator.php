@@ -62,10 +62,13 @@ class TyposcriptCodeGenerator extends AbstractCodeGenerator
 					)
 				);
 				if (!$element["hidden"]) {
-					if ($element['key'] === "articlenavigation" || $element['key'] === "articlestart" ||  $element['key'] === "articlestartcircle" || $element['key'] === "articlestartperson") {
+					if ($element['key'] === "articlenavigation" || $element['key'] === "articlestart" || $element['key'] === "articlestartcircle" || $element['key'] === "articlestartperson") {
 						$templateWithKey = str_replace("###tab###", 'article', $template);
 
-					} else{
+					} elseif ($element['key'] === "audio" || $element['key'] === 'vimeo' || $element['key'] === 'image' || $element['key'] === 'imagewithtext') {
+						$templateWithKey = str_replace("###tab###", 'media', $template);
+
+					} else {
 						$templateWithKey = str_replace("###tab###", 'mask', $template);
 
 					}
